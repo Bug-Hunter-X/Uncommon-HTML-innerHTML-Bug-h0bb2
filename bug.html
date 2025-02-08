@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is initially visible.
+  </div>
+  <button onclick="myFunction()">Click Me</button>
+
+  <script>
+    function myFunction() {
+      //Bug: Incorrect usage of innerHTML leading to unexpected behavior
+      document.getElementById("myDiv").innerHTML = document.getElementById("myDiv").innerHTML + "<p>Added paragraph</p>";
+    }
+  </script>
+</body>
+</html>
